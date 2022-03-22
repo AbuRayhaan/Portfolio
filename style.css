@@ -343,3 +343,64 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.contact-me {
+  display:flex;
+  flex-direction: column;
+  row-gap: 5.5rem;
+  justify-content: center;
+  padding: 1.5em 1.5rem;
+  align-items: center;
+  background-image: url(images/contact-form-shapes-mobile.svg),
+  url(images/contact-me-background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 16px;
+    box-sizing: border-box;
+    width: 87.2%;
+    margin: 0 auto;
+}
+
+.contact-me-container .contact-me-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.contact-me-container .contact-me-text {
+  justify-content: center;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.contact-me-container .contact-me-para {
+  color: #ebebff;
+  padding: 0.5em 0;
+}
+
+.contact-info {
+  align-items: flex-start;
+  height: 36px;
+  margin: 0.5em 0;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background: #fff;
+  width:100%;
+  padding: 5px 15px 5px 5px;
+  font-size: 18px;
+}
+
+.txt {
+  height: 170px;
+  color: #b3bac5;
+}
