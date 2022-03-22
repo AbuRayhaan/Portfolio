@@ -379,9 +379,11 @@ main {
 }
 
 .contact-me-container .contact-me-text {
+  font-size: 40px;
   justify-content: center;
   text-align: center;
   padding: 1em 0;
+  color: #fff;
 }
 
 .contact-me-container .contact-me-para {
