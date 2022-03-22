@@ -345,28 +345,29 @@ main {
 }
 
 .contact-me {
-  display:flex;
+  display: flex;
   flex-direction: column;
   row-gap: 5.5rem;
   justify-content: center;
   padding: 1.5em 1.5rem;
   align-items: center;
-  background-image: url(images/contact-form-shapes-mobile.svg),
-  url(images/contact-me-background.svg);
+  background-image:
+    url(images/contact-form-shapes-mobile.svg),
+    url(images/contact-me-background.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .contact-me-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    border-radius: 16px;
-    box-sizing: border-box;
-    width: 87.2%;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 16px;
+  box-sizing: border-box;
+  width: 87.2%;
+  margin: 0 auto;
 }
 
 .contact-me-container .contact-me-block {
@@ -395,7 +396,7 @@ main {
   border: 1px solid #cfd8dc;
   border-radius: 8px;
   background: #fff;
-  width:100%;
+  width: 100%;
   padding: 5px 15px 5px 5px;
   font-size: 18px;
 }
