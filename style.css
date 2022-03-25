@@ -12,6 +12,7 @@ body {
   font-weight: normal;
   line-height: 1.5rem;
   background: #f7f7f9;
+  background-size: cover;
 }
 
 ul,
@@ -32,7 +33,7 @@ a:link {
 
 a:hover {
   color: #6e79df;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 header {
@@ -74,12 +75,13 @@ main {
   align-items: flex-start;
   padding: 7.125rem 1.5rem;
   background-image:
-    url(images/header-shapes-mobile.svg),
-    url(images/header-background-mobile.svg);
+    url(images/header-bg.svg),
+    url(images/header-background-shape-desktop.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: center;
   border-bottom-left-radius: 90px;
+  row-gap: 10px;
 }
 
 .header-menu {
@@ -104,7 +106,7 @@ main {
   font-size: 1.0625rem;
   font-weight: 500;
   margin: 0.75rem 0;
-  color: #4b5399;
+  color: #7f8cff;
 }
 
 .social-media-icons {
@@ -316,8 +318,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  width: 92%;
+  gap: 1.75rem;
+  width: 30%;
   margin: 0;
   padding: 0.75rem 0;
 }
@@ -325,6 +327,7 @@ main {
 .language {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 1rem;
   width: 100%;
   height: 4.17rem;
@@ -364,6 +367,7 @@ main {
 .contact-header {
   align-items: center;
   text-align: center;
+  font-size: 40px;
   padding: 8px 0;
   color: white;
 }
@@ -396,17 +400,18 @@ form label text area {
 }
 
 .contact-info {
-  font-size: 18px;
+  font-size: 16px;
   font-family: sans-serif, calibri;
   color: black;
   height: 36px;
   background: white;
   border: 1px solid #cfd8dc;
   border-radius: 4px;
+  width: 327px;
 }
 
 .contact-txt {
-  font-size: 18px;
+  font-size: 16px;
   font-family: sans-serif, calibri;
   color: black;
   background: white;
@@ -422,7 +427,7 @@ form label text area {
 
 @media screen and (min-width: 768px) {
   .headline {
-    padding: 114px 260px;
+    padding: 180px 260px;
   }
 
   .menu-container,
@@ -430,9 +435,16 @@ form label text area {
     display: none;
   }
 
+  header .my-logo-container {
+    margin-left: 155px;
+  }
+
   .header-menu {
+    font-size: 15px;
+    color: #344563;
     display: flex;
-    gap: 32px;
+    gap: 24px;
+    margin-right: 154px;
   }
 
   .project-works {
@@ -460,7 +472,13 @@ form label text area {
 
   .language-list {
     flex-direction: row;
-    width: 30%;
+    gap: 8px;
+    width: 20%;
+  }
+
+  .language {
+    background: #f7f7f9;
+    margin-bottom: 30px;
   }
 
   .top-container {
