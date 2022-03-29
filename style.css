@@ -32,7 +32,7 @@ a:link {
 }
 
 a:hover {
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 
@@ -238,7 +238,7 @@ main {
 
 .button:hover {
   color: #fff;
-  background: #000000;
+  background: #000;
 }
 
 .button:active {
