@@ -406,8 +406,9 @@ form label text area {
   height: 36px;
   background: white;
   border: 1px solid #cfd8dc;
-  border-radius: 4px;
+  border-radius: 8px;
   width: 327px;
+  padding-left: 12px;
 }
 
 .contact-txt {
@@ -416,8 +417,10 @@ form label text area {
   color: black;
   background: white;
   border: 1px solid #cfd8dc;
-  border-radius: 2px;
+  border-radius: 8px;
   height: 170px;
+  padding-top: 8px;
+  padding-left: 12px;
 }
 
 .contact-button {
@@ -483,5 +486,29 @@ form label text area {
 
   .top-container {
     width: 70%;
+  }
+
+  .contact-info {
+    font-size: 16px;
+    font-family: sans-serif, calibri;
+    color: black;
+    height: 36px;
+    background: white;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    width: 447px;
+    padding-left: 12px;
+  }
+
+  .contact-txt {
+    font-size: 16px;
+    font-family: sans-serif, calibri;
+    color: black;
+    background: white;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    height: 170px;
+    padding-top: 8px;
+    padding-left: 12px;
   }
 }

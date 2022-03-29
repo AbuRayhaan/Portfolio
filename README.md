@@ -1,6 +1,6 @@
 # Mobile-Design
 
-![screenshot](./screenshot.png)
+![screenshot](images/screenshot.png)
 
 This my Mobile-Design Project in the Microverse curriculum.
 
