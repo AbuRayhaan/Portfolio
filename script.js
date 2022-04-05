@@ -6,8 +6,7 @@ hamburger.addEventListener('click', () => {
   toggleMenu.classList.toggle('active');
 });
 
-document.querySelectorAll('.toggle-item').forEach(n => n.
-  addEventListener('click', () => {
+document.querySelectorAll('.toggle-item').forEach(n => n.addEventListener('click', () => {
   hamburger.classList.remove('active');
   toggleMenu.classList.remove('active');
 }));
