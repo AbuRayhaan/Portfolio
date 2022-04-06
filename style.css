@@ -15,6 +15,10 @@ body {
   background-size: cover;
 }
 
+body.active {
+  filter: blur(4px);
+}
+
 ul,
 li {
   list-style-type: none;
@@ -65,7 +69,7 @@ header .my-logo,
 header .hamburger {
   display: block;
   width: 100%;
-  z-index: 1;
+  z-index: 21;
 }
 
 .bar {
@@ -107,13 +111,15 @@ header .hamburger {
   gap: 65px;
   position: fixed;
   right: 0;
-  top:0;
+  top: 0;
   background-color: #6070ff;
-  opacity: 95%;
+  opacity: 0.9;
   padding-top: 90px;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
-.toggle-item a {  
+.toggle-item a {
   font-size: 32px;
   color: white;
   font-weight: bold;
@@ -129,18 +135,12 @@ main {
   flex-direction: column;
   align-items: flex-start;
   padding: 7.125rem 1.5rem;
-  background-image:
-    url(images/header-bg.svg),
-    url(images/header-background-shape-desktop.svg);
+  background-image: url(images/header-shapes-mobile.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-bottom-left-radius: 90px;
   row-gap: 10px;
-}
-
-.headline.active {
-  filter: blur(4px);
 }
 
 .header-primary-text {
