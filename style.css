@@ -117,7 +117,7 @@ header .hamburger {
   padding-top: 90px;
   overflow-x: hidden;
   box-sizing: border-box;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
 }
 
 .toggle-item a {
@@ -309,9 +309,6 @@ main {
 .about-myself {
   border-bottom-left-radius: 0;
   border-top-right-radius: 90px;
-  background-image: url(../images/about-myself-background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .about-myself .top-container {
@@ -401,7 +398,6 @@ main {
 .line {
   width: 100%;
   height: 0.0625rem;
-  background-image: url(../images/SeparatorBottom.svg);
   background-color: #809de6;
   background-repeat: no-repeat;
   background-size: cover;

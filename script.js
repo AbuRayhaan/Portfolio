@@ -114,11 +114,20 @@ function popUp(popUpData) {
   const projectLiveBtn = document.createElement('button');
   projectLiveBtn.setAttribute('class', 'button');
   projectLiveBtn.setAttribute('type', 'button');
-  projectLiveBtn.innerHTML = 'See Live <img src=".images/live-icon.svg"';
+  projectLiveBtn.innerHTML = 'See Live <i class="fas fa-arrow-circle-right fa-lg"></i>';
   const projectSourceBtn = document.createElement('button');
   projectSourceBtn.setAttribute('class', 'button');
   projectSourceBtn.setAttribute('type', 'button');
-  projectSourceBtn.innerHTML = 'See Source';
+  projectSourceBtn.innerHTML = 'See Source <i class="fab fa-github fa-lg"></i>';
+
+  const closeBtnPop = document.createElement('i');
+  closeBtnPop.className = 'fas fa-times';
+  closeBtnPop.addEventListener('click', () => {
+    const popup = document.querySelector('.project-pop');
+    if (popup) {
+      popup.parentElement.removeChild(popup);
+    }
+  });
 
   projectPop.append(projectContainer);
   projectContainer.append(projectName);
@@ -142,9 +151,9 @@ function popUp(popUpData) {
   return projectPop;
 }
 
-const { body } = document;
+const body = document.querySelector('body');
 
-document.querySelectorAll('.popUp-button').forEach((btn) => {
+body.querySelectorAll('.popUp-button').forEach((btn) => {
   btn.addEventListener('click', (event) => {
     if (!document.querySelector('.project-pop')) {
       const popupData = projectData[parseInt(event.target.id, 10)];
