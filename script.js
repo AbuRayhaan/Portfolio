@@ -152,13 +152,13 @@ function popUp(popUpData) {
 }
 
 const body = document.querySelector('body');
+const popUpBtn = document.querySelectorAll('.popUp-button');
 
-body.querySelectorAll('.popUp-button').forEach((btn) => {
+popUpBtn.forEach((btn) => {
   btn.addEventListener('click', (event) => {
-    if (!document.querySelector('.project-pop')) {
-      const popupData = projectData[parseInt(event.target.id, 10)];
-      const popup = popUp(popupData);
-      body.append(popup);
-    }
-  });
-});
+    const projectId = event.target.dataset.id;
+    const popupData = projectData[projectId];
+    const popup = popUp(popupData);
+    body.append(popup);
+  })
+})
