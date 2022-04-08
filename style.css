@@ -117,7 +117,7 @@ header .hamburger {
   padding-top: 90px;
   overflow-x: hidden;
   box-sizing: border-box;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
 }
 
 .toggle-item a {
@@ -309,9 +309,6 @@ main {
 .about-myself {
   border-bottom-left-radius: 0;
   border-top-right-radius: 90px;
-  background-image: url(../images/about-myself-background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .about-myself .top-container {
@@ -401,7 +398,6 @@ main {
 .line {
   width: 100%;
   height: 0.0625rem;
-  background-image: url(../images/SeparatorBottom.svg);
   background-color: #809de6;
   background-repeat: no-repeat;
   background-size: cover;
@@ -482,6 +478,136 @@ form label text area {
 .contact-button {
   width: 140px;
   margin: 15px 0 30px 0;
+}
+
+/*  POPUP WINDOW  */
+.project-pop {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+}
+
+.project-container {
+  position: absolute;
+  z-index: 20;
+  width: 75%;
+  height: 90%;
+  padding: 0 5%;
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  overflow-x: hidden;
+}
+
+.project-container .fa-times {
+  width: 12px;
+  float: right;
+  margin-right: 14px;
+}
+
+.project-name {
+  font-size: 32px;
+  margin-top: 38px;
+  font-weight: bold;
+  line-height: 64px;
+}
+
+.project-container .fa-xmark {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.project-tech {
+  display: flex;
+  gap: 3px;
+  color: #7a869a;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.project-tech .project-info {
+  color: black;
+}
+
+.project-tech span {
+  width: 8px;
+}
+
+.popup-image {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 20px auto;
+  justify-content: center;
+  background-color: #e6e6e2;
+  border-radius: 8px;
+}
+
+.project-desc {
+  float: left;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.lang-container {
+  display: flex;
+  margin: 18px 24px 18px 0;
+  gap: 8px;
+  width: 100%;
+  height: 1rem;
+  align-items: center;
+}
+
+.project-lang {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+  color: #3b4eff;
+  background: #ebebff;
+  letter-spacing: 0.03em;
+}
+
+.line-span {
+  margin: 20px auto;
+  width: 100%;
+  height: 1px;
+  color: #dfe1e6;
+}
+
+.project-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin: 26px 0;
+}
+
+.project-btn {
+  width: auto;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  gap: 10px;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  padding: 12px 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -581,5 +707,105 @@ form label text area {
     height: 170px;
     padding-top: 8px;
     padding-left: 12px;
+  }
+
+  /*  POPUP WINDOW  */
+  .project-container {
+    position: absolute;
+    z-index: 20;
+    width: 70%;
+    padding: 0 5%;
+    background: #fff;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+    margin: 60px 32px;
+  }
+
+  .project-container .fa-xmark {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    cursor: pointer;
+  }
+
+  .project-name {
+    font-size: 32px;
+    margin-top: 38px;
+    font-weight: bold;
+    line-height: 64px;
+  }
+
+  .project-tech {
+    display: flex;
+    gap: 8px;
+    color: #7a869a;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .project-tech .project-info {
+    color: black;
+  }
+
+  .popup-image {
+    align-items: center;
+    width: 100%;
+    height: 220px;
+    margin: 20px auto;
+  }
+
+  .project-desc {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: normal;
+    width: 65%;
+  }
+
+  .lang-container {
+    display: flex;
+    margin: 18px 24px 18px 0;
+    gap: 8px;
+    width: 30%;
+    height: 1rem;
+    align-items: center;
+  }
+
+  .project-lang {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    color: #3b4eff;
+    background: #ebebff;
+    letter-spacing: 0.03em;
+  }
+
+  .line-span {
+    margin: 20px auto;
+    width: 30%;
+    height: 1px;
+    color: #dfe1e6;
+    margin-left: 30px;
+  }
+
+  .project-button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 30%;
+    margin: 26px 0;
+  }
+
+  .project-btn {
+    width: auto;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding: 12px;
   }
 }
