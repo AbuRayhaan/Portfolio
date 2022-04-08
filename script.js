@@ -64,6 +64,34 @@ const projectData = [
   },
 ];
 
+const work = document.querySelector('#work');
+
+for (let i = 0; i < projectData.length; i += 1) {
+  work.innerHTML += `<ul class="project-works">
+  <li class="project-image-container">
+    <img src="${projectData[i].projectImageURL}" alt="Tonic" class="mobile-image">
+  </li>
+
+  <li class="project-body-block">
+    <h2 class="project-title">${projectData[i].projectName}</h2>
+    <div class="project-info">
+      <span class="project-info-items canopy">${projectData[i].projectInfo}</span>
+      <img src="./images/Counter.svg" alt="counter">
+      <span class="project-info-items">${projectData[i].projectDev}</span>
+      <img src="./images/Counter.svg" alt="counter">
+      <span class="project-info-items">${projectData[i].projectYear}</span>
+    </div>
+    <p class="project-primary-text">${projectData[i].projectDesc}</p>
+    <ul class="tags">
+      <li class="tag">${projectData[i].projectLang1}</li>
+      <li class="tag">${projectData[i].projectLang2}</li>
+      <li class="tag">${projectData[i].projectLang3}</li>
+    </ul>
+    <button class="button popUp-button" data-id="3" type="button">See Project</button>
+  </li>
+</ul>`;
+}
+
 function popUp(popUpData) {
   const projectPop = document.createElement('div');
   projectPop.setAttribute('class', 'project-pop');
@@ -118,10 +146,10 @@ function popUp(popUpData) {
   const projectSourceBtn = document.createElement('button');
   projectSourceBtn.setAttribute('class', 'button');
   projectSourceBtn.setAttribute('type', 'button');
-  projectSourceBtn.innerHTML = 'See Source <i class="fab fa-github fa-lg"></i>';
+  projectSourceBtn.innerHTML = 'See Source <i class="fa-brands fa-github"></i>';
 
   const closeBtnPop = document.createElement('i');
-  closeBtnPop.className = 'fas fa-times';
+  closeBtnPop.className = 'fa-solid fa-xmark';
   closeBtnPop.addEventListener('click', () => {
     const popup = document.querySelector('.project-pop');
     if (popup) {
@@ -131,6 +159,7 @@ function popUp(popUpData) {
 
   projectPop.append(projectContainer);
   projectContainer.append(projectName);
+  projectContainer.append(closeBtnPop);
   projectContainer.append(projectTech);
   projectTech.append(projectInfo);
   projectTech.append(projectSpan);
