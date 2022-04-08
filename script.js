@@ -160,5 +160,5 @@ popUpBtn.forEach((btn) => {
     const popupData = projectData[projectId];
     const popup = popUp(popupData);
     body.append(popup);
-  })
-})
+  });
+});

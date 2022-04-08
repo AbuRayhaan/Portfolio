@@ -489,7 +489,6 @@ form label text area {
   bottom: 0;
   left: 0;
   width: 100%;
-  max-height: 100vh;
   background: rgba(0, 0, 0, 0.3);
   justify-content: center;
   align-items: center;
@@ -499,18 +498,17 @@ form label text area {
 .project-container {
   position: absolute;
   z-index: 20;
-  width: 87%;
+  width: 75%;
   padding: 0 5%;
   background: #fff;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
-  margin: 60px 32px 50px 32px;
+  margin-top: 60px;
 }
 
 .project-container .fa-times {
   width: 12px;
   float: right;
-  margin-top: 30px;
   margin-right: 14px;
 }
 
@@ -702,131 +700,104 @@ form label text area {
     padding-top: 8px;
     padding-left: 12px;
   }
-  
+
   /*  POPUP WINDOW  */
-  /*.project-pop {
+  .project-container {
+    position: absolute;
+    z-index: 20;
+    width: 70%;
+    padding: 0 5%;
+    background: #fff;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+    margin: 60px 32px;
+  }
+
+  .project-container .fa-times {
+    width: 12px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 14px;
+  }
+
+  .project-name {
+    font-size: 32px;
+    margin-top: 38px;
+    font-weight: bold;
+    line-height: 64px;
+  }
+
+  .project-tech {
     display: flex;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    max-height: 100vh;
-    background: rgba(0, 0, 0, 0.3);
-    justify-content: center;
+    gap: 8px;
+    color: #7a869a;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .project-tech .project-info {
+    color: black;
+  }
+
+  .popup-image {
     align-items: center;
-    backdrop-filter: blur(3px);
-}
-*/
-.project-container {
-  position: absolute;
-  z-index: 20;
-  width: 70%;
-  padding: 0 5%;
-  background: #fff;
-  border: 1px solid #dfe1e6;
-  border-radius: 16px;
-  margin: 60px 32px;
-}
+    width: 100%;
+    height: 220px;
+    margin: 20px auto;
+  }
 
-.project-container .fa-times {
-  width: 12px;
-  float: right;
-  margin-top: 30px;
-  margin-right: 14px;
-}
+  .project-desc {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: normal;
+    width: 65%;
+  }
 
-.project-name {
-  font-size: 32px;
-  margin-top: 38px;
-  font-weight: bold;
-  line-height: 64px;
-}
+  .lang-container {
+    display: flex;
+    margin: 18px 24px 18px 0;
+    gap: 8px;
+    width: 30%;
+    height: 1rem;
+    align-items: center;
+  }
 
-.project-tech {
-  display: flex;
-  gap: 8px;
-  color: #7a869a;
-  font-weight: 600;
-  font-size: 16px;
-}
+  .project-lang {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    color: #3b4eff;
+    background: #ebebff;
+    letter-spacing: 0.03em;
+  }
 
-.project-tech .project-info {
-  color: black;
-}
+  .line-span {
+    margin: 20px auto;
+    width: 30%;
+    height: 1px;
+    color: #dfe1e6;
+    margin-left: 30px;
+  }
 
-.project-tech span {
-  width: 8px;
-}
+  .project-button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 30%;
+    margin: 26px 0;
+  }
 
-.popup-image {
-  align-items: center;
-  width: 100%;
-  height: 220px;
-  margin: 20px auto;
-}
-
-.project-desc {
-  font-size: 15px;
-  line-height: 24px;
-  font-weight: normal;
-}
-
-.project-desc {
-  float: left;
-  font-size: 15px;
-  line-height: 24px;
-  font-weight: normal;
-  width: 60%;
-  margin-bottom: 20px;
-}
-
-.lang-container {
-  display: flex;
-  margin: 18px 24px 18px 0;
-  gap: 8px;
-  width: 100%;
-  height: 1rem;
-  align-items: center;
-}
-
-.project-lang {
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: 8px;
-  color: #3b4eff;
-  background: #ebebff;
-  letter-spacing: 0.03em;
-}
-
-.line-span {
-  margin: 20px auto;
-  width: 100%;
-  height: 1px;
-  color: #dfe1e6;
-}
-
-.project-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  margin: 26px 0;
-}
-
-.project-btn {
-  width: auto;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  gap: 10px;
-  align-items: center;
-  margin-top: 5px;
-  margin-bottom: 25px;
-  padding: 12px 15px;
-}
+  .project-btn {
+    width: auto;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding: 12px;
+  }
 }
