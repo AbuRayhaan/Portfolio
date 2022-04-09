@@ -162,18 +162,19 @@
             <p class="contact-para">If you have an application you are interested in <br>developing, 
               a feature that you need built or a project <br> that needs coding. I'd love to help with it
             </p>
-            <form action="https://formspree.io/f/xnqwbqza" class="contact-form" method="POST">
+          
+            <form action="https://formspree.io/f/xnqwbqza" class="contact-form" method="POST" id='contact-form'>
               <label for="username">
                 <input type="text" name="username" id="username" class="contact-info" placeholder="Full Name" maxlength="30" required>
               </label>
-              <label for="usermail">
-                <input type="email" name="usermail" id="usermail" class="contact-info" placeholder="Email Address" required>
+              <label for="usermail" id='usermailLabel'>
+                <input class="contact-info" type="email" id="usermail" name="usermail" required placeholder="username@example.com" >
               </label>
               <label for="usermsg">
                 <textarea name="usermsg" id="usermsg" cols="30" rows="10" class="contact-txt contact-info" 
                 placeholder="Write your message here" maxlength="500" required></textarea>
               </label>
-                <button type="submit" class="button contact-button">Get It Touch</button>
+                <button type='submit' class="button">Get It Touch</button><span id="loginError"></span>
             </form>
           </section>        
   </main>

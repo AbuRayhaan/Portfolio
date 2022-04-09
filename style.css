@@ -480,6 +480,10 @@ form label text area {
   margin: 15px 0 30px 0;
 }
 
+#loginError {
+  color: red;
+}
+
 /*  POPUP WINDOW  */
 .project-pop {
   display: flex;
