@@ -64,6 +64,8 @@ const projectData = [
   },
 ];
 
+/*  POPUP-WINDOW  */
+
 const work = document.querySelector('#work');
 
 for (let i = 0; i < projectData.length; i += 1) {
@@ -190,4 +192,18 @@ popUpBtn.forEach((btn) => {
     const popup = popUp(popupData);
     body.append(popup);
   });
+});
+
+/*  Client-Side Validation  */
+const form = document.querySelector('.contact-form');
+const text = document.querySelector('#loginError');
+form.addEventListener('submit', (event) => {
+  const emailValue = form.elements.usermail.value;
+  if ((emailValue.toLowerCase() !== emailValue)) {
+    event.preventDefault();
+    text.classList.add('active');
+    text.innerHTML = 'Please enter email adress in lowercase';
+  } else {
+    form.submit();
+  }
 });
