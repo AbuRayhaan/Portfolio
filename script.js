@@ -16,39 +16,45 @@ document.querySelectorAll('.toggle-item').forEach((n) => n.addEventListener('cli
 const projectData = [
   {
     id: 1,
-    projectName: 'Tonic',
-    projectInfo: 'CANOPY',
+    projectName: 'To Do List App',
+    projectInfo: 'Daily Activity Tracker',
     projectDev: 'Back End Dev',
-    projectYear: '2015',
-    projectImageURL: './images/SnapshootPortfolioE.svg',
-    projectDesc: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    projectYear: '2022',
+    projectImageURL: './images/toDo.png',
+    projectDesc: 'A daily activity tracking application that helps to organize your daily tasks and keep track of tasks that have been completed, or yet to be completed.',
     projectLang1: 'html',
     projectLang2: 'css',
     projectLang3: 'javascript',
+    projectURL: 'https://aburayhaan.github.io/To-Do-List/',
+    projectSource: 'https://github.com/AbuRayhaan/To-Do-List',
   },
   {
     id: 2,
-    projectName: 'Multi-Post Stories',
-    projectInfo: 'FACEBOOK',
+    projectName: 'VIBRANT YOUTH SUMMIT',
+    projectInfo: 'VIABLE',
     projectDev: 'Full Stack Dev',
-    projectYear: '2015',
-    projectImageURL: './images/SnapshootPortfolioD.svg',
-    projectDesc: 'Experiment content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
+    projectYear: '2022',
+    projectImageURL: './images/viable.png',
+    projectDesc: 'A global network platform for Software Developers to share opportunities and a create a positive change with people from over 80 countries.',
     projectLang1: 'html',
     projectLang2: 'css',
     projectLang3: 'javascript',
+    projectURL: 'https://aburayhaan.github.io/Viable-Project/',
+    projectSource: 'https://github.com/AbuRayhaan/Viable-Project',
   },
   {
     id: 3,
-    projectName: 'Facebook 360',
-    projectInfo: 'FACEBOOK',
+    projectName: 'AWESOME BOOKS',
+    projectInfo: 'LIBRARY',
     projectDev: 'Full Stack Dev',
-    projectYear: '2015',
-    projectImageURL: './images/SnapshootPortfolioA.svg',
-    projectDesc: 'Exploring the future of media in Facebook first Virtual Reality app a place to discover and enjoy 360 photos and videos on Gear VR.',
+    projectYear: '2022',
+    projectImageURL: './images/awesome.png',
+    projectDesc: 'An online library for adding and removing books from a user collection, it helps to keep track of the books users have read and the unread books.',
     projectLang1: 'html',
     projectLang2: 'css',
     projectLang3: 'javascript',
+    projectURL: 'https://aburayhaan.github.io/Awesome-Book/',
+    projectSource: 'https://github.com/AbuRayhaan/Awesome-Book',
   },
   {
     id: 4,
@@ -123,6 +129,7 @@ function popUp(popUpData) {
   const projectPopImage = document.createElement('img');
   projectPopImage.setAttribute('src', popUpData.projectImageURL);
   projectPopImage.setAttribute('alt', 'project-image');
+  projectPopImage.setAttribute('class', 'popup-img');
   const projectDesc = document.createElement('p');
   projectDesc.setAttribute('class', 'project-desc');
   projectDesc.innerHTML = popUpData.projectDesc;
@@ -141,10 +148,15 @@ function popUp(popUpData) {
   projectButton.setAttribute('class', 'project-button');
   const span = document.createElement('hr');
   span.setAttribute('class', 'line-span');
+  const aLiveBtn = document.createElement('a');
+  aLiveBtn.setAttribute('href', popUpData.projectURL);
   const projectLiveBtn = document.createElement('button');
   projectLiveBtn.setAttribute('class', 'button');
   projectLiveBtn.setAttribute('type', 'button');
+  projectLiveBtn.setAttribute('onclick', 'location.href = popUpData.projectURL');
   projectLiveBtn.innerHTML = 'See Live <i class="fas fa-arrow-circle-right fa-lg"></i>';
+  const aSourceBtn = document.createElement('a');
+  aSourceBtn.setAttribute('href', popUpData.projectSource);
   const projectSourceBtn = document.createElement('button');
   projectSourceBtn.setAttribute('class', 'button');
   projectSourceBtn.setAttribute('type', 'button');
@@ -177,18 +189,19 @@ function popUp(popUpData) {
   projectLang.append(projectLangItem3);
   projectContainer.append(span);
   projectContainer.append(projectButton);
-  projectButton.append(projectLiveBtn);
-  projectButton.append(projectSourceBtn);
+  projectButton.append(aLiveBtn);
+  aLiveBtn.append(projectLiveBtn);
+  projectButton.append(aSourceBtn);
+  aSourceBtn.append(projectSourceBtn);
   return projectPop;
 }
 
 const body = document.querySelector('body');
 const popUpBtn = document.querySelectorAll('.popUp-button');
 
-popUpBtn.forEach((btn) => {
-  btn.addEventListener('click', (event) => {
-    const projectId = event.target.dataset.id;
-    const popupData = projectData[projectId];
+popUpBtn.forEach((btn, i) => {
+  btn.addEventListener('click', () => {
+    const popupData = projectData[i];
     const popup = popUp(popupData);
     body.append(popup);
   });

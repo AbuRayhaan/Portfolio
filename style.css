@@ -557,6 +557,10 @@ form label text area {
   border-radius: 8px;
 }
 
+.popup-img {
+  width: 70%;
+}
+
 .project-desc {
   float: left;
   font-size: 15px;
@@ -753,9 +757,13 @@ form label text area {
 
   .popup-image {
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: 220px;
     margin: 20px auto;
+  }
+
+  .popup-img {
+    width: 34%;
   }
 
   .project-desc {
