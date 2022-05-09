@@ -16,12 +16,12 @@ document.querySelectorAll('.toggle-item').forEach((n) => n.addEventListener('cli
 const projectData = [
   {
     id: 1,
-    projectName: 'Tonic',
-    projectInfo: 'CANOPY',
+    projectName: 'To Do List App',
+    projectInfo: 'Daily Activity Tracker',
     projectDev: 'Back End Dev',
-    projectYear: '2015',
-    projectImageURL: './images/SnapshootPortfolioE.svg',
-    projectDesc: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    projectYear: '2022',
+    projectImageURL: './images/toDo.png',
+    projectDesc: 'A daily activity tracking application that helps to organize your daily tasks and keep track of tasks that have been completed, or yet to be completed.',
     projectLang1: 'html',
     projectLang2: 'css',
     projectLang3: 'javascript',
@@ -185,10 +185,9 @@ function popUp(popUpData) {
 const body = document.querySelector('body');
 const popUpBtn = document.querySelectorAll('.popUp-button');
 
-popUpBtn.forEach((btn) => {
+popUpBtn.forEach((btn, i) => {
   btn.addEventListener('click', (event) => {
-    const projectId = event.target.dataset.id;
-    const popupData = projectData[projectId];
+    const popupData = projectData[i];
     const popup = popUp(popupData);
     body.append(popup);
   });
