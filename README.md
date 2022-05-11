@@ -12,7 +12,7 @@ This my Mobile-Design Project in the Microverse curriculum.
 
 ## Live Demo
 
-[Live Demo Link](https://aburayhaan.github.io/Mobile-Website/)
+[Live Demo Link](https://aburayhaan.github.io/Portfolio/)
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ To get a local copy up and running:
 
 1. Clone this repository or download the Zip folder:
 
-**``git clone https://github.com/AbuRayhaan/Mobile-Website``**
+**``git clone https://aburayhaan.github.io/Portfolio/``**
 
 1. Navigate to the location of the folder in your machine:
 
