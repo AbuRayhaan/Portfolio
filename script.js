@@ -97,7 +97,7 @@ const projectData = [
     projectLang3: 'javascript',
     projectURL: 'https://aburayhaan.github.io/To-Do-List/',
     projectSource: 'https://github.com/AbuRayhaan/To-Do-List',
-  },  
+  },
 ];
 
 /*  POPUP-WINDOW  */

@@ -292,7 +292,7 @@ main {
   color: #3b4eff;
 }
 
-.button:hover {
+.button:hover, {
   color: #fff;
   background: #000;
 }
@@ -304,6 +304,10 @@ main {
 
 .button:disabled {
   color: #5e6c84;
+}
+
+.resume:hover {
+  color: white;
 }
 
 .about-myself {
