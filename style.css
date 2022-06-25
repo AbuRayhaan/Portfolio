@@ -51,7 +51,7 @@ header {
   bottom: 0;
   width: 100%;
   height: 3rem;
-  background: #fff;
+  background-color: #3b4eff;
 }
 
 header .my-logo-container {
@@ -63,6 +63,11 @@ header nav {
   cursor: pointer;
   margin-right: 2.25rem;
   z-index: 1;
+}
+
+.header-name {
+  font-weight: bold;
+  color: white;
 }
 
 header .my-logo,
@@ -112,7 +117,7 @@ header .hamburger {
   position: fixed;
   right: 0;
   top: 0;
-  background-color: #0720f9c2;
+  background-color: rgb(160, 140, 247);
   opacity: 0.9;
   padding-top: 90px;
   overflow-x: hidden;
@@ -142,6 +147,7 @@ main {
   background-position: center;
   border-bottom-left-radius: 90px;
   row-gap: 10px;
+  background-color: rgb(160, 140, 247);
 }
 
 .header-primary-text {
@@ -634,7 +640,7 @@ form label text area {
     bottom: 0;
     width: 100%;
     height: 3rem;
-    background: #fff;
+    background-color: rgb(118, 103, 187);
   }
 
   header .hamburger {
