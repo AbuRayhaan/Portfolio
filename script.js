@@ -90,7 +90,7 @@ const projectData = [
     projectInfo: 'Daily Activity Tracker',
     projectDev: 'Back End Dev',
     projectYear: '2022',
-    projectImageURL: './images/toDo.png',
+    projectImageURL: './images/toDoApp.png',
     projectDesc: 'A daily activity tracking application that helps to organize your daily tasks and keep track of tasks that have been completed, or yet to be completed.',
     projectLang1: 'html',
     projectLang2: 'css',
