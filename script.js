@@ -111,7 +111,7 @@ const projectData = [
     projectLang3: 'API',
     projectURL: 'https://jolly-otter-7d885a.netlify.app/',
     projectSource: 'https://github.com/AbuRayhaan/Cubis',
-  }
+  },
 ];
 
 /*  POPUP-WINDOW  */
